@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEM EE - Ingénierie Électrique & Solutions Hybrides</title>
+    <!-- Bootstrap 5 & FontAwesome -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Look moderne) -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- DESIGN SYSTEM 2025 --- */
+        :root {
+            --primary: #0f172a; /* Bleu Nuit Profond */
+            --secondary: #f59e0b; /* Ambre Électrique */
+            --light: #f8fafc;
+            --dark: #1e293b;
+        }
+        body { font-family: 'Outfit', sans-serif; background-color: var(--light); color: var(--dark); }
+        
+        /* Navbar "Premium" */
+        .navbar-custom { background-color: var(--primary); padding: 1rem 0; }
+        .nav-link { color: rgba(255,255,255,0.8) !important; font-weight: 500; transition: 0.3s; margin: 0 10px; }
+        .nav-link:hover, .nav-link.active { color: var(--secondary) !important; }
+        .btn-cta { background: var(--secondary); color: var(--primary); font-weight: 700; border-radius: 50px; padding: 10px 30px; border: none; transition: 0.3s; }
+        .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3); color: white; }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.8)), url('https://source.unsplash.com/1600x900/?solar-panel,circuit');
+            background-size: cover; background-position: center; height: 85vh; display: flex; align-items: center; color: white;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); /* Coupe moderne en bas */
+        }
+        
+        /* Cards Services */
+        .service-card {
+            border: none; border-radius: 20px; background: white; padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.4s ease;
+        }
+        .service-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .icon-box {
+            width: 70px; height: 70px; background: rgba(245, 158, 11, 0.1); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; color: var(--secondary); margin-bottom: 1.5rem;
+        }
+
+        /* Footer */
+        footer { background: var(--primary); color: white; padding-top: 4rem; padding-bottom: 2rem; }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="index.html">
+                <i class="fas fa-bolt text-warning"></i> DEM EE
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="realisations.html">Innovations</a></li>
+                    <li class="nav-item ms-3"><a class="btn-cta" href="contact.html">Obtenir un Devis</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <span class="badge bg-warning text-dark mb-3 px-3 py-2 rounded-pill">Expertise Béninoise 🇧🇯</span>
+                    <h1 class="display-3 fw-bold mb-4">L'Ingénierie Électrique <br><span class="text-warning">Nouvelle Génération</span></h1>
+                    <p class="lead mb-5 text-light opacity-75">Spécialistes en solutions industrielles, énergies renouvelables et systèmes automatisés. Nous transformons vos besoins complexes en solutions durables.</p>
+                    <a href="contact.html" class="btn btn-cta btn-lg me-3">Démarrer un projet</a>
+                    <a href="#services" class="btn btn-outline-light btn-lg rounded-pill px-4">Nos Services</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h5 class="text-warning fw-bold text-uppercase ls-2">Nos Expertises</h5>
+                <h2 class="fw-bold display-5 text-dark">Ce que nous maîtrisons</h2>
+            </div>
+
+            <div class="row g-4">
+                <!-- Service 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card h-100">
+                        <div class="icon-box"><i class="fas fa-industry fa-2x"></i></div>
+                        <h4>Industriel</h4>
+                        <p class="text-muted">Câblage d'armoires TGBT, maintenance de lignes de production et mise aux normes internationales.</p>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card h-100">
+                        <div class="icon-box"><i class="fas fa-solar-panel fa-2x"></i></div>
+                        <h4>Solaire</h4>
+                        <p class="text-muted">Dimensionnement et installation de centrales photovoltaïques hybrides pour l'autonomie énergétique.</p>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card h-100">
+                        <div class="icon-box"><i class="fas fa-microchip fa-2x"></i></div>
+                        <h4>Domotique</h4>
+                        <p class="text-muted">Smart Home : Contrôle à distance, sécurité intelligente et gestion optimisée de l'énergie.</p>
+                    </div>
+                </div>
+                <!-- Service 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card h-100">
+                        <div class="icon-box"><i class="fas fa-robot fa-2x"></i></div>
+                        <h4>Automatisme</h4>
+                        <p class="text-muted">Programmation d'API (Siemens, Schneider) et supervision de processus industriels.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Simple -->
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0 text-white-50">&copy; 2026 DEM Electrical Engineering. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
